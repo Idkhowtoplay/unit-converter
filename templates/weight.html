@@ -1,0 +1,29 @@
+{% extends "index.html" %}
+{% block content %}
+<form method="post">
+    <label for="weight">Enter the weight to convert</label><br>
+    <input type="text" id="weight" name="weight"><br><br>
+    <label for="convert">Unit to convert from</label><br>
+    <select id="unit_from" name="unit_from">
+        <option value="mg">mg</option>
+        <option value="gram">gr</option>
+        <option value="kg">kg</option>
+        <option value="ounce">oz</option>
+        <option value="pound">lbs</option>
+    </select><br><br>
+    <label for="unit to">Unit to convert to</label><br>
+    <select id="unit_to" name="unit_to">
+        <option value="mg">mg</option>
+        <option value="gram">gr</option>
+        <option value="kg">kg</option>
+        <option value="oz">oz</option>
+        <option value="lb">lb</option>
+    </select><br><br>
+    <button type="submit">Convert</button>
+</form>
+<div class="result">
+    {% if result %}
+        <p>Result of your calculation<br> {{result}}</p>
+    {% endif %}
+</div>
+{% endblock %}

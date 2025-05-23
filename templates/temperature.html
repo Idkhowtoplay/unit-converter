@@ -1,0 +1,25 @@
+{% extends "index.html" %}
+{% block content %}
+<form method="post">
+    <label for="temperature">Enter the temperature to convert</label><br>
+    <input type="number" id="number" name="number"><br><br>
+    <label for="convert">Unit to convert from</label><br>
+    <select id="unit_from" name="unit_from">
+        <option value="°C">°C</option>
+        <option value="°F">°F</option>
+        <option value="k">k</option>
+    </select><br><br>
+    <label for="unit">Unit to convert to</label><br>
+    <select id="unit_to" name="unit_to">
+        <option value="°C">°C</option>
+        <option value="°F">°F</option>
+        <option value="k">k</option>
+    </select><br><br>
+    <button type="submit">Convert</button>
+</form>
+<div class="result">
+    {% if result %}
+        <p>Result of your calculation<br> {{result}}</p>
+    {% endif %}
+</div>
+{% endblock %}

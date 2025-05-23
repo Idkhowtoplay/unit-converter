@@ -1,0 +1,92 @@
+body{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box {
+    background-color: white;
+    width: 300px;
+    height: 400px;
+    border: 2px solid black;
+    padding: 50px;
+    margin: 20px;
+    box-sizing: border-box;
+    position: relative;
+    
+}
+.box main{
+    position: absolute;
+    font-family: monospace;
+    font-size: medium;
+    top: 110px;
+    left: 13px;
+}
+.box main form button{
+    font-family: monospace;
+    color: black;
+    display: inline-block;
+    border-color: black;
+    padding: 3px 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    background-color: white;
+}
+.box main form select{
+    width: 160px;
+}
+.box main div{
+    font-size: larger;
+}
+.top-left {
+    position: absolute;
+    font-family: monospace;
+    font-size: large;
+    bottom: 330px;
+    left: 10px;
+}
+.navbar{
+    position: absolute;
+    right: 80px;
+    display: flex;
+}
+.navbar ul{
+    list-style-type: none;
+    gap: 25px;
+    display: flex;
+}
+.navbar ul li{
+    position: relative;
+    left: 43px;
+    bottom: 10px;
+}
+.navbar ul li a{
+    text-decoration: none;
+    font-size: larger;
+    font-family: monospace;
+    color: black;
+    transition: 0.3s ease;
+}
+.navbar ul li a::before{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: -5px;
+    background-color: cornflowerblue;
+    transition: 0.3s ease;
+}
+.navbar ul li a:hover{
+    color: cornflowerblue;
+}
+.navbar ul li a:hover::before{
+    width: 100%;
+}
+
+
+
